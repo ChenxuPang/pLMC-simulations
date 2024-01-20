@@ -1,0 +1,3 @@
+This repository contains the source code and images for the high-dimensional numerical simulations referenced in the paper 'Projected Langevin Monte Carlo algorithms in non-convex and super-linear setting', authored by Chenxu Pang, Xiaojie Wang and Yue Wu.
+
+Folder 'code' includes the running code for the four examples in the article, where the settings for the model parameters are specifically presented, as well as all the output results, which are the data sources for the tables in the paper. Folder 'figure' contains all the images that appear in the article.
