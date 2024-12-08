@@ -76,7 +76,7 @@ for p=1
         nor = (Y1pe.^2 + Y2pe.^2 + Y3pe.^2+ Y4pe.^2 + Y5pe.^2+ Y6pe.^2 ...
              + Y7pe.^2 + Y8pe.^2 + Y9pe.^2+ Y10pe.^2 ).^(0.5);
 %======================================================================
-        tamed = (B+Dt*nor.^6).^0.5;
+        tamed = (B+Dt*nor.^4).^0.5;
 %======================================================================       
         Y1pe = Y1pe + (alpha* Y1pe - beta* Y1pe.*(nor).^2 ) * Dt./ tamed + sqrt(2)*Winc1;
         Y2pe = Y2pe + (alpha* Y2pe - beta* Y2pe.*(nor).^2 ) * Dt./ tamed + sqrt(2)*Winc2;
@@ -97,8 +97,8 @@ end
 ymin = min(Y1Euler);
 ymax = max(Y1Euler);
 x1 = linspace(ymin, ymax,20);
-yy1=hist(Y1Euler,x1);%¼ÆËã¸÷¸öÇø¼äµÄ¸öÊı
-yy1=yy1/length(Y1Euler);%¼ÆËã¸÷¸öÇø¼äµÄ¸öÊı
+yy1=hist(Y1Euler,x1);%è®¡ç®—å„ä¸ªåŒºé—´çš„ä¸ªæ•°
+yy1=yy1/length(Y1Euler);%è®¡ç®—å„ä¸ªåŒºé—´çš„ä¸ªæ•°
 %
 bar(x1,yy1,'c');
 hold on;
